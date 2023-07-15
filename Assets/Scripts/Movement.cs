@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    RigidBody2D m_rigidBody;
+    Rigidbody m_rigidBody;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
