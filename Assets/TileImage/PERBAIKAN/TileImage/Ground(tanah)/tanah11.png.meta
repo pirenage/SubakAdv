@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c87bc86ee63ab2940bcad13d26f3f4cc
+guid: 4c3a4d757e081d6459d0ed19467722c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tanah7_0
+      name: tanah11_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 21
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6caac4be25094c24897197d0887b9b0e
-      internalID: -1324368084
+      spriteID: dca0274247a0a1846987ac414399fa75
+      internalID: -547223657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanah7_1
+      name: tanah11_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 10
+        y: 21
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a918dd2071d481c4ea24230276d25372
-      internalID: 1564818564
+      spriteID: ce419bc67df4f044c952086cba1dbe4f
+      internalID: -1734710852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanah7_2
+      name: tanah11_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 21
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add2ebb7b38104f48b76d7dab5fba878
+      internalID: 1974660498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tanah11_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
-        height: 16
+        y: 11
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 966e71f2611ade04ab6ef0ece1ee2679
-      internalID: 196579751
+      spriteID: e9fcb024003dd374ab2a2180bcbca487
+      internalID: -496760913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanah7_3
+      name: tanah11_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 10
+        y: 11
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +221,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f22acabcde778e4db90b7893979a53b
-      internalID: 765635371
+      spriteID: 37b39a10584c3dc4c83fae2568841652
+      internalID: 789312360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tanah11_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 11
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9406467ce220e4a93fd62948dbfd28
+      internalID: 181937358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tanah11_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a294402ab1b804f80c225811b60144
+      internalID: -928720292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tanah11_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1478fec52e9b65743ada646dd06ebc1e
+      internalID: -514390963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tanah11_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1400a2a5d84de4d479b76eae71ce3137
+      internalID: 1765652860
       vertices: []
       indices: 
       edges: []
@@ -217,10 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tanah7_0: -1324368084
-      tanah7_1: 1564818564
-      tanah7_2: 196579751
-      tanah7_3: 765635371
+      tanah11_0: -547223657
+      tanah11_1: -1734710852
+      tanah11_2: 1974660498
+      tanah11_3: -496760913
+      tanah11_4: 789312360
+      tanah11_5: 181937358
+      tanah11_6: -928720292
+      tanah11_7: -514390963
+      tanah11_8: 1765652860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
