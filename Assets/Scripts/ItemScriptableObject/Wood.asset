@@ -15,6 +15,5 @@ MonoBehaviour:
   stackable: 1
   IsBreakable: 0
   Name: Kayu
-  MaxStack: 0
   Description: Ini merupakan Kayu bla bla bla
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 1fbe56a5f9190e1488e29c6b90b3b965, type: 3}

@@ -15,6 +15,5 @@ MonoBehaviour:
   stackable: 0
   IsBreakable: 0
   Name: Batu
-  MaxStack: 32
   Description: Ini merupakan Batu Untuk Crafting
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: f8aa822cadb859f418c08b1f428da650, type: 3}

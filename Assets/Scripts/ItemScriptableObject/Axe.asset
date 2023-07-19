@@ -15,6 +15,5 @@ MonoBehaviour:
   stackable: 1
   IsBreakable: 1
   Name: Axe
-  MaxStack: 1
   Description: ini merupakan alat memotong kayu
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 3b6280ee435862141b6e7431c365a011, type: 3}
