@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5078188854923159397}
   - component: {fileID: 195792347238444292}
+  - component: {fileID: 6593575451562259660}
   m_Layer: 0
   m_Name: potongan pohon
   m_TagString: Untagged
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6593575451562259660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772892495876018052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e3296c2d168214d88958ae0f4a5bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  pickupDistance: 1.5
+  ttl: 10
+  item: {fileID: 11400000, guid: 42b0f26038e776047ab3ecbd5e9ee1d7, type: 2}
+  count: 1

@@ -8,7 +8,7 @@ public class ToolsCharacterController : MonoBehaviour
     Rigidbody2D Rb2d;
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfinteraction = 1.2f;
-    [SerializeField] MarkerManager markerManager;
+    // [SerializeField] MarkerManager markerManager;
     // [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
 
@@ -41,12 +41,12 @@ public class ToolsCharacterController : MonoBehaviour
         Vector2 characterPosition = transform.position;
         Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
-        markerManager.Show(selectable);
+        // markerManager.Show(selectable);
     }
 
     private void Marker()
     {
-        markerManager.markedCellPosition = selectedTilePosition;
+        // markerManager.markedCellPosition = selectedTilePosition;
     }
 
     private void UseTool()
