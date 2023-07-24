@@ -8,6 +8,8 @@ using System;
 public class DayTimeController : MonoBehaviour
 {
     const float secondsInDays = 86400f;
+    const float phaseLength = 900f;
+
     [SerializeField] AnimationCurve nightTimeCurve;
     [SerializeField] Color sunRiseLightColor = new Color(1f, 0.75f, 0.5f); // Contoh warna fajar
     [SerializeField] Color nightLightColor = new Color(0.1f, 0.1f, 0.2f); // Contoh warna malam
@@ -16,14 +18,30 @@ public class DayTimeController : MonoBehaviour
 
     float time;
     [SerializeField] float timeScale = 60f;
-    [SerializeField] TextMeshProUGUI Time;
-    [SerializeField] TextMeshProUGUI Day;
+    [SerializeField] float startAtTime = 28800f;
+    [SerializeField] TextMeshProUGUI text;
     [SerializeField] Light2D globalLight;
+    List<TimeAgent> agents;
     private int days;
 
-    string[] dayNames = { "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" };
-    int currentDayIndex = 0;
-    private int currentDate = 1;
+    private void Awake()
+    {
+        agents = new List<TimeAgent>();
+    }
+
+    private void Start()
+    {
+        time = startAtTime;
+    }
+
+    public void Subscribe(TimeAgent timeAgent)
+    {
+        agents.Add(timeAgent);
+    }
+    public void UnSubscribe(TimeAgent timeAgent)
+    {
+        agents.Remove(timeAgent);
+    }
 
     float Hours
     {
@@ -37,19 +55,37 @@ public class DayTimeController : MonoBehaviour
 
     void Update()
     {
-        time += UnityEngine.Time.deltaTime * timeScale;
-        int hh = (int)Hours;
-        int mm = (int)Minutes;
-        if (mm % 5 != 0)
+        time += Time.deltaTime * timeScale;
+        TimeValueCalculation();
+        DayLight();
+
+        if (time > secondsInDays)
         {
-            mm = ((mm / 5) + 1) * 5;
-            if (mm >= 60)
+            nextDay();
+        }
+        TimeAgents();
+    }
+
+    int oldPhase = 0;
+    private void TimeAgents()
+    {
+        int currentPhase = (int)(time / phaseLength);
+        Debug.Log(currentPhase);
+
+        if (oldPhase != currentPhase)
+        {
+            oldPhase = currentPhase;
+            for (int i = 0; i < agents.Count; i++)
             {
-                mm = 0;
-                hh = (hh + 1) % 24;
+                agents[i].Invoke();
             }
         }
-        Time.text = hh.ToString("00") + ":" + mm.ToString("00");
+
+
+    }
+
+    private void DayLight()
+    {
         float v = nightTimeCurve.Evaluate(Hours);
         Color c;
         if (v < 0.25f)
@@ -64,30 +100,28 @@ public class DayTimeController : MonoBehaviour
         {
             c = dayLightColor;
         }
-
         globalLight.color = c;
+    }
 
-        int currentDay = (days + currentDayIndex) % 7; // Hitung indeks hari saat ini
-        Day.text = dayNames[currentDay] + " , " + (currentDate + 1).ToString("00");
-
-        if (time > secondsInDays)
+    private void TimeValueCalculation()
+    {
+        int hh = (int)Hours;
+        int mm = (int)Minutes;
+        if (mm % 5 != 0)
         {
-            nextDay();
+            mm = ((mm / 5) + 1) * 5; // Menjadikan menit kelipatan 5 berikutnya
+            if (mm >= 60)
+            {
+                mm = 0; // Reset menit ke 0 jika sudah mencapai 60
+                hh = (hh + 1) % 24; // Tambah 1 jam dan reset ke 0 setelah mencapai 24 jam
+            }
         }
+        text.text = hh.ToString("00") + ":" + mm.ToString("00");
     }
 
     private void nextDay()
     {
         time = 0;
         days += 1;
-
-        if (currentDate >= 30)
-        {
-            currentDate = 1;
-        }
-        else
-        {
-            currentDate++;
-        }
     }
 }
