@@ -28,14 +28,17 @@ public class ToolBarController : MonoBehaviour
         float delta = Input.mouseScrollDelta.y;
         if (delta != 0)
         {
-            selectedTool += 1;
-            selectedTool = (selectedTool >= toolbarSize ? 0 : selectedTool);
+            if (delta < 0)
+            {
+                selectedTool += 1;
+                selectedTool = (selectedTool >= toolbarSize ? 0 : selectedTool);
+            }
+            else
+            {
+                selectedTool -= 1;
+                selectedTool = (selectedTool < 0 ? toolbarSize - 1 : selectedTool);
+            }
+            onChange?.Invoke(selectedTool);
         }
-        else
-        {
-            selectedTool -= 1;
-            selectedTool = (selectedTool <= 0 ? toolbarSize - 1 : selectedTool);
-        }
-        onChange?.Invoke(selectedTool);
     }
 }
