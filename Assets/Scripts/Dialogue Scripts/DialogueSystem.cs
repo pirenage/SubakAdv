@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueSystem : MonoBehaviour
 {
-    [SerializeField] Text targetText;
-    [SerializeField] Text nameText;
+    [SerializeField] TextMeshProUGUI targetText;
+    [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] Image portrait;
 
     DialogueContainer currentDialogue;
