@@ -16,13 +16,19 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Color sunSetLightColor = new Color(1f, 0.4f, 0.2f); // Contoh warna senja
     [SerializeField] Color dayLightColor = Color.white; // Contoh warna siang
 
-    float time;
+    [SerializeField] TextMeshProUGUI dayText; // Referensi ke objek TextMeshPro UI untuk nama hari
+    [SerializeField] TextMeshProUGUI timeText; // Referensi ke objek TextMeshPro UI untuk jam
+    [SerializeField] Light2D globalLight;
+
+    string[] dayNames = { "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" };
+    int currentDayIndex = 0;
+    private int days;
+    private int currentDate = 1;
+    private float time;
     [SerializeField] float timeScale = 60f;
     [SerializeField] float startAtTime = 28800f;
-    [SerializeField] TextMeshProUGUI text;
-    [SerializeField] Light2D globalLight;
+
     List<TimeAgent> agents;
-    private int days;
 
     private void Awake()
     {
@@ -80,8 +86,6 @@ public class DayTimeController : MonoBehaviour
                 agents[i].Invoke();
             }
         }
-
-
     }
 
     private void DayLight()
@@ -116,12 +120,26 @@ public class DayTimeController : MonoBehaviour
                 hh = (hh + 1) % 24; // Tambah 1 jam dan reset ke 0 setelah mencapai 24 jam
             }
         }
-        text.text = hh.ToString("00") + ":" + mm.ToString("00");
+        timeText.text = hh.ToString("00") + ":" + mm.ToString("00");
+
+        // Tampilkan nama hari sekarang di UI
+        int currentDay = (days + currentDayIndex) % 7; // Hitung indeks hari saat ini
+        dayText.text = dayNames[currentDay] + " , " + currentDate.ToString("00");
     }
 
     private void nextDay()
     {
         time = 0;
         days += 1;
+
+        // Reset tanggal ke 1 jika tanggal melebihi 30
+        if (currentDate >= 30)
+        {
+            currentDate = 1;
+        }
+        else
+        {
+            currentDate++;
+        }
     }
 }
