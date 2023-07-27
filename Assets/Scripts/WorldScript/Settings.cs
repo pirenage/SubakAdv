@@ -76,21 +76,25 @@ public class Settings : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        Debug.Log("Resolution set to " + resolution.width + "x" + resolution.height);
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        Debug.Log("Fullscreen set to " + isFullscreen);
     }
 
     public void SetGraphicsQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        Debug.Log("Graphics quality set to " + qualityIndex);
     }
 
     public void SetAudioVolume(float volume)
     {
         audioMixer.SetFloat("MasterVolume", volume);
+        Debug.Log("Audio volume set to " + volume);
     }
 
     private void LoadResolutions()
