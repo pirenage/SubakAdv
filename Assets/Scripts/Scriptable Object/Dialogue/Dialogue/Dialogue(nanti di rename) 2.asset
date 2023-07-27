@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 2
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Apa Kabar?
+  - 'senang bertemu dengan anda! '
+  actor: {fileID: 11400000, guid: 2d67d97df2da65c4ab074453264f4259, type: 2}

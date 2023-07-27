@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 6
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Permisi, Apakah anda I Gede Bagus?
+  - Perkenalkan saya Nyoman Punjoy
+  actor: {fileID: 11400000, guid: c08c2f8e43bfa244c9941dbee0658f94, type: 2}

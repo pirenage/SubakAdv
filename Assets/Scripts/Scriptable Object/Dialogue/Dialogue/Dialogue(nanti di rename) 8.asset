@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 8
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Saya Putu Gede Krisna
+  - 'semoga hari anda menyenangkan. '
+  actor: {fileID: 11400000, guid: 77193669f8246ff46bd4692adc327c80, type: 2}

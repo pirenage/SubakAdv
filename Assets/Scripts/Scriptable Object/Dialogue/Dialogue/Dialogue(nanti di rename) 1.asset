@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 1
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Selamat siang
+  - Saya I Wayan Aziz
+  - Pemilik Toko "Sebelah"
+  actor: {fileID: 11400000, guid: 73196c1b70b65f04aba6ee016c4cd022, type: 2}

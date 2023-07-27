@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 7
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - ' Izinkan saya memperkenalkan diri, '
+  - Saya Tatang
+  - senang bertemu dengan anda
+  actor: {fileID: 11400000, guid: 7b650acd24178e2499d6e30e63acf082, type: 2}

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename) 5
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - ' Hi, I Gede Bagus'
+  - Kita bertemu lagi!  saya, I Wayan Mahen
+  actor: {fileID: 11400000, guid: 63d029bb6fd5ae04dbf0e0f73b53f494, type: 2}
