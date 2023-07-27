@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -7,17 +9,18 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-
     public string sceneName; // The name of the scene you want to load
-    public AudioMixer audioMixer;
-    public Dropdown resolutionDropdown;
-    public Dropdown qualityDropdown;
+
+    public TMP_Dropdown resolutionDropdown;
     public Toggle fullscreenToggle;
-    public Slider volumeSlider;
+    public TMP_Dropdown graphicsQualityDropdown;
+    public Slider audioVolumeSlider;
+    public AudioMixer audioMixer;
 
-    Resolution[] resolutions;
+    private Resolution[] resolutions;
+    private string[] qualityLevels;
 
-    public void ChangeScene()
+    public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
@@ -62,41 +65,11 @@ public class Settings : MonoBehaviour
 
 
 
-    void Start()
+    private void Start()
     {
-        // Populate resolution options
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
-
-        List<string> options = new List<string>();
-        int currentResolutionIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
-
-        // Populate quality options
-        qualityDropdown.value = QualitySettings.GetQualityLevel();
-
-        // Set fullscreen mode
-        fullscreenToggle.isOn = Screen.fullScreen;
-
-        // Set volume level
-        float volume;
-        audioMixer.GetFloat("volume", out volume);
-        volumeSlider.value = volume;
+        LoadResolutions();
+        LoadQualityLevels();
+        LoadAudioVolume();
     }
 
     public void SetResolution(int resolutionIndex)
@@ -105,20 +78,62 @@ public class Settings : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
 
-    public void SetVolume(float volume)
+    public void SetGraphicsQuality(int qualityIndex)
     {
-        audioMixer.SetFloat("volume", volume);
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 
+    public void SetAudioVolume(float volume)
+    {
+        audioMixer.SetFloat("MasterVolume", volume);
+    }
+
+    private void LoadResolutions()
+    {
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+
+        int currentResolutionIndex = 0;
+        List<string> resolutionOptions = new List<string>();
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            resolutionOptions.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(resolutionOptions);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+    }
+
+    private void LoadQualityLevels()
+    {
+        qualityLevels = QualitySettings.names;
+        graphicsQualityDropdown.ClearOptions();
+        graphicsQualityDropdown.AddOptions(qualityLevels.ToList());
+        graphicsQualityDropdown.value = QualitySettings.GetQualityLevel();
+        graphicsQualityDropdown.RefreshShownValue();
+    }
+
+    private void LoadAudioVolume()
+    {
+        float volume;
+        audioMixer.GetFloat("MasterVolume", out volume);
+        audioVolumeSlider.value = volume;
+    }
 }
+
+
 
