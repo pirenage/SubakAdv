@@ -76,7 +76,7 @@ public class DayTimeController : MonoBehaviour
     private void TimeAgents()
     {
         int currentPhase = (int)(time / phaseLength);
-        Debug.Log(currentPhase);
+        // Debug.Log(currentPhase);
 
         if (oldPhase != currentPhase)
         {

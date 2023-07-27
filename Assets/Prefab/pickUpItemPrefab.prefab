@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5078188854923159397}
   - component: {fileID: 195792347238444292}
-  - component: {fileID: 6593575451562259660}
+  - component: {fileID: -6595261598593728030}
   m_Layer: 0
   m_Name: pickUpItemPrefab
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &195792347238444292
 SpriteRenderer:
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6593575451562259660
+--- !u!114 &-6595261598593728030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,11 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2772892495876018052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e3296c2d168214d88958ae0f4a5bce, type: 3}
+  m_Script: {fileID: 11500000, guid: fc6f138da6c57c0488a8f9ccaa009715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   pickupDistance: 1.5
   ttl: 10
-  item: {fileID: 11400000, guid: 42b0f26038e776047ab3ecbd5e9ee1d7, type: 2}
+  item: {fileID: 11400000, guid: 39ebc9a1254f3c8479645ea45c903e2e, type: 2}
   count: 1

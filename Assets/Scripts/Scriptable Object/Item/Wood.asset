@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stackable: 1
   Name: Kayu
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 9dd234801c484544bbf787e3069f9002, type: 3}
   onAction: {fileID: 0}
   onTilemapAction: {fileID: 0}
   onItemUsed: {fileID: 0}

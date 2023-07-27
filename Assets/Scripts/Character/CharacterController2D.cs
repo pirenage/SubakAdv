@@ -19,13 +19,13 @@ public class CharacterController2D : MonoBehaviour
     private bool canDash = true;
 
     // Parameter Animation
-    public string XInput = "Horizontal";
-    public string YInput = "Vertical";
-    public string X = "X";
-    public string Y = "Y";
-    public string IsMove = "IsMoving";
-    public string LastPosition = "LastHori";
-    public string LastPositionY = "LastVerti";
+    private string XInput = "Horizontal";
+    private string YInput = "Vertical";
+    private string X = "X";
+    private string Y = "Y";
+    private string IsMove = "IsMoving";
+    private string LastPosition = "LastHori";
+    private string LastPositionY = "LastVerti";
     // End parameter
 
     private void Awake()
