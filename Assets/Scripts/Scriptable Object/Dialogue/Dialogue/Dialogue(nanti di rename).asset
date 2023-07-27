@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d798fd84333af44a82546be746223a3, type: 3}
   m_Name: Dialogue(nanti di rename)
   m_EditorClassIdentifier: 
-  line: []
+  line:
+  - 
+  - 
   actor: {fileID: 0}
