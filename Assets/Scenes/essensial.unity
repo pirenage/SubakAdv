@@ -736,9 +736,9 @@ MonoBehaviour:
   moving: 0
   dashCooldown: 0.5
   dashDistance: 2
-  Jalan: {fileID: 0}
-  dash: {fileID: 0}
-  sneak: {fileID: 0}
+  Jalan: {fileID: 8300000, guid: ac07eeaefef1b6f4485f763d41955ab7, type: 3}
+  dash: {fileID: 8300000, guid: 5e519a5817053da4085c1c08993561cd, type: 3}
+  sneak: {fileID: 8300000, guid: ac07eeaefef1b6f4485f763d41955ab7, type: 3}
 --- !u!114 &242317994
 MonoBehaviour:
   m_ObjectHideFlags: 0

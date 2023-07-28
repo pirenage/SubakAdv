@@ -15,6 +15,7 @@ public class Transition : MonoBehaviour
     [SerializeField] Transitiontype transitiontype;
     [SerializeField] string sceneNameTransition;
     [SerializeField] Vector3 targetPosition;
+    [SerializeField] AudioClip bukapintu;
 
     internal void InitiateTransition(Transform toTransition)
     {
