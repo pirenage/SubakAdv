@@ -66,11 +66,11 @@ public class Settings : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public TextMeshProUGUI progres;
-    public void loadLevel(int levelName)
+    public void loadLevel(string levelName)
     {
         StartCoroutine(LoadAsynchronisly(levelName));
     }
-    IEnumerator LoadAsynchronisly(int levelName)
+    IEnumerator LoadAsynchronisly(string levelName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
 

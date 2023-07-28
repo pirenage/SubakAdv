@@ -14,16 +14,21 @@ public class Transition : MonoBehaviour
     Transform destination;
     [SerializeField] Transitiontype transitiontype;
     [SerializeField] string sceneNameTransition;
+    [SerializeField] Vector3 targetPosition;
 
     internal void InitiateTransition(Transform toTransition)
     {
+        Cinemachine.CinemachineBrain currentCamera = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
+
         switch (transitiontype)
         {
             case Transitiontype.Warp:
+                currentCamera.ActiveVirtualCamera.OnTargetObjectWarped(toTransition, destination.position - toTransition.position);
+
                 toTransition.position = new Vector3(destination.position.x, destination.position.y, toTransition.position.z);
                 break;
             case Transitiontype.Scene:
-                SceneManager.LoadScene(sceneNameTransition);
+                GameSceneManager.instance.InitSwitchScreen(sceneNameTransition, targetPosition);
                 break;
 
         }
