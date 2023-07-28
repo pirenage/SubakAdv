@@ -19,6 +19,7 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] TextMeshProUGUI dayText; // Referensi ke objek TextMeshPro UI untuk nama hari
     [SerializeField] TextMeshProUGUI timeText; // Referensi ke objek TextMeshPro UI untuk jam
     [SerializeField] Light2D globalLight;
+    [SerializeField] Light2D myLight;
 
     string[] dayNames = { "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" };
     int currentDayIndex = 0;
@@ -70,6 +71,8 @@ public class DayTimeController : MonoBehaviour
             nextDay();
         }
         TimeAgents();
+
+
     }
 
     int oldPhase = 0;
@@ -105,6 +108,16 @@ public class DayTimeController : MonoBehaviour
             c = dayLightColor;
         }
         globalLight.color = c;
+
+        float currentTime = Hours + Minutes / 60f;
+        if (currentTime >= 17.5f || currentTime < 6f) // memeriksa apakah waktu sekarang setelah jam 17:30 atau sebelum jam 6:00
+        {
+            myLight.enabled = true; // mengaktifkan lampu
+        }
+        else
+        {
+            myLight.enabled = false; // menonaktifkan lampu
+        }
     }
 
     private void TimeValueCalculation()
@@ -141,5 +154,11 @@ public class DayTimeController : MonoBehaviour
         {
             currentDate++;
         }
+    }
+
+    internal void SleepUntilMorning()
+    {
+        time = 6f * 3600f; // Mengatur waktu menjadi 06:00
+        myLight.enabled = false; // Mematikan lampu (jika lampu harus mati saat tidur)
     }
 }
