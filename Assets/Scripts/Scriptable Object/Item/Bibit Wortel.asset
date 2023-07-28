@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stackable: 1
   Name: Bibit Wortel
-  Icon: {fileID: 21300000, guid: e1450f67208332549a73e34f6579ff6d, type: 3}
+  Icon: {fileID: 21300000, guid: b210f26890a220b469828bd5087cc00d, type: 3}
   onAction: {fileID: 0}
   onTilemapAction: {fileID: 11400000, guid: bea9c69bd9ab67e4e89e3e2fac1328cb, type: 2}
   onItemUsed: {fileID: 11400000, guid: bea9c69bd9ab67e4e89e3e2fac1328cb, type: 2}
