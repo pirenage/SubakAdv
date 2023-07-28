@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 605a4a2d31cb4e9429943d39950db42f
+  - enabled: 1
+    path: Assets/Scenes/MainScene(Dummy).unity
+    guid: a189cd0ac5e5c9d4783fe3bdf93c737a
+  - enabled: 1
+    path: Assets/Scenes/essensial.unity
+    guid: 2ab51aa74df647148b3a0a405a5a9c0a
+  - enabled: 1
+    path: Assets/Scenes/RumahMc.unity
+    guid: beec5127de2a50d4e9c8102c938146d5
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: d678d399f2fcfbe4b86f6a051d500f90, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2fd410502cc601f4797e9ee4ab904308, type: 2}
