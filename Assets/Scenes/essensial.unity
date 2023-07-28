@@ -736,6 +736,9 @@ MonoBehaviour:
   moving: 0
   dashCooldown: 0.5
   dashDistance: 2
+  Jalan: {fileID: 0}
+  dash: {fileID: 0}
+  sneak: {fileID: 0}
 --- !u!114 &242317994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5242,7 +5245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenTint: {fileID: 1234231924}
-  confiner: {fileID: 0}
+  confiner: {fileID: 1028894980}
 --- !u!1001 &1507491229
 PrefabInstance:
   m_ObjectHideFlags: 0

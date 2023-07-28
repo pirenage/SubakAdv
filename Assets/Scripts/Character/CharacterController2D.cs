@@ -17,13 +17,17 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] float dashCooldown = 1f;
     [SerializeField] float dashDistance = 5f;
     private bool canDash = true;
+    private bool isWalkingSoundPlaying = false;
+    [SerializeField] AudioClip Jalan;
+    [SerializeField] AudioClip dash;
+    [SerializeField] AudioClip sneak;
 
     // Parameter Animation
     private string XInput = "Horizontal";
     private string YInput = "Vertical";
     private string X = "X";
     private string Y = "Y";
-    private string IsMove = "IsMoving";
+    private string IsMove = "moving";
     private string LastPosition = "LastHori";
     private string LastPositionY = "LastVerti";
     // End parameter
@@ -45,7 +49,7 @@ public class CharacterController2D : MonoBehaviour
         anima.SetFloat(Y, Vertical);
 
         moving = Horizontal != 0 || Vertical != 0;
-        anima.SetBool("moving", moving);
+        anima.SetBool(IsMove, moving);
         if (Horizontal != 0 || Vertical != 0)
         {
             lastmotionVector = new Vector2(Horizontal, Vertical).normalized;
@@ -59,6 +63,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 speed /= 4;
                 isSpeedReduced = true;
+                AudioManager.instance.Play(sneak);
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -72,6 +77,19 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             Dash();
+
+            AudioManager.instance.Play(sneak);
+        }
+        if (moving && !isWalkingSoundPlaying)
+        {
+
+            AudioManager.instance.Play(Jalan);
+
+            isWalkingSoundPlaying = true;
+        }
+        else if (!moving)
+        {
+            isWalkingSoundPlaying = false;
         }
     }
 
