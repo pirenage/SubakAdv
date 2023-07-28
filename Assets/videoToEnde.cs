@@ -6,9 +6,9 @@ using UnityEngine.Video;
 
 public class videoToEnde : MonoBehaviour
 {
-
     public VideoPlayer videoPlayer;
-    public string sceneToLoad;
+    public string essentialSceneToLoad;
+    public string mainSceneToLoad;
 
     void Start()
     {
@@ -17,7 +17,8 @@ public class videoToEnde : MonoBehaviour
 
     void LoadScene(VideoPlayer vp)
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(essentialSceneToLoad);
+        SceneManager.LoadScene(mainSceneToLoad, LoadSceneMode.Additive);
     }
 }
 
