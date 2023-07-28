@@ -63,7 +63,26 @@ public class Settings : MonoBehaviour
         Application.Quit();
     }
 
+    public GameObject loadingScreen;
+    public Slider slider;
+    public TextMeshProUGUI progres;
+    public void loadLevel(string levelName)
+    {
+        StartCoroutine(LoadAsynchronisly(levelName));
+    }
+    IEnumerator LoadAsynchronisly(string levelName)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
 
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            progres.text = progress * 100f + "%";
+            yield return null;
+        }
+    }
 
     private void Start()
     {

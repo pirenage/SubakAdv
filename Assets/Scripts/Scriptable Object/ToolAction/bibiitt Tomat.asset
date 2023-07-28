@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97b54806c9e72ac45ad261bb74241bcd, type: 3}
-  m_Name: bibiitt
+  m_Name: bibiitt Tomat
   m_EditorClassIdentifier: 
   timeToGrow: 10
-  yield: {fileID: 11400000, guid: 8a7728997ded77044b064a38def99ed4, type: 2}
-  count: 1
+  yield: {fileID: 11400000, guid: b106c9aee1414ea488ea318127b64256, type: 2}
+  count: 2
   sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 600769251, guid: a1eec82d3b3f97743990f5b33aa22289, type: 3}
+  - {fileID: 2094122423, guid: a1eec82d3b3f97743990f5b33aa22289, type: 3}
+  - {fileID: -1030339157, guid: a1eec82d3b3f97743990f5b33aa22289, type: 3}
+  - {fileID: -83985697, guid: a1eec82d3b3f97743990f5b33aa22289, type: 3}
   GrowthStageTime: 04000000070000000d00000014000000
