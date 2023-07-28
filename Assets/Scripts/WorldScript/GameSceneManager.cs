@@ -14,7 +14,10 @@ public class GameSceneManager : MonoBehaviour
     }
 
     [SerializeField] ScreenTint screenTint;
+    [SerializeField] CameraConfiner confiner;
     string currentScene;
+    AsyncOperation load;
+    AsyncOperation unload;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().name;
@@ -29,14 +32,20 @@ public class GameSceneManager : MonoBehaviour
         screenTint.Tint();
         yield return new WaitForSeconds(1f / screenTint.speed + 0.1f);
         SwitcScene(to, targetposition);
-        yield return new WaitForEndOfFrame();
+        while (load != null && unload != null)
+        {
+            if (load.isDone) { load = null; }
+            if (unload.isDone) { unload = null; }
+        }
+        yield return new WaitForSeconds(0.1f);
 
         screenTint.UnTint();
+        confiner.UpdateBounds();
     }
     public void SwitcScene(string to, Vector3 targertposition)
     {
-        SceneManager.LoadScene(to, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(currentScene);
+        load = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+        unload = SceneManager.UnloadSceneAsync(currentScene);
         currentScene = to;
 
         Transform playerTransform = GameManager.instance.player.transform;
