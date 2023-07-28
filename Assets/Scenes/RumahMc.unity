@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 78325693}
   m_Layer: 0
   m_Name: kasur
-  m_TagString: Untagged
+  m_TagString: Bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -834,13 +834,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1510230884002313794, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -186.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510230884002313794, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839518143171944207, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
+      propertyPath: bukapintu
+      value: 
+      objectReference: {fileID: 8300000, guid: f0f223cbb78c80f4ebc9e1a10fc97ac3, type: 3}
     - target: {fileID: 4839518143171944207, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
       propertyPath: transitiontype
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4839518143171944207, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
       propertyPath: targetPosition.x
-      value: 140.2
+      value: 139
       objectReference: {fileID: 0}
     - target: {fileID: 4839518143171944207, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
       propertyPath: targetPosition.y
@@ -848,7 +860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839518143171944207, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
       propertyPath: sceneNameTransition
-      value: MainScene(Dummy)
+      value: MainScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904949174490504432, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
+      propertyPath: m_Size.x
+      value: 4.3463993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904949174490504432, guid: b106775e63f36f040ba69134a74d10e0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.27886677
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

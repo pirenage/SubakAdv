@@ -313,3 +313,5 @@ MonoBehaviour:
   videoPlayer: {fileID: 1247954314}
   essentialSceneToLoad: essensial
   mainSceneToLoad: MainScene
+  playerStartPosition: {x: 140, y: -70, z: 0}
+  player: {fileID: 1247954310}

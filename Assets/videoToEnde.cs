@@ -6,9 +6,11 @@ using UnityEngine.Video;
 
 public class videoToEnde : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
+     public VideoPlayer videoPlayer;
     public string essentialSceneToLoad;
     public string mainSceneToLoad;
+    public Vector3 playerStartPosition;
+    public GameObject player;
 
     void Start()
     {
@@ -19,6 +21,9 @@ public class videoToEnde : MonoBehaviour
     {
         SceneManager.LoadScene(essentialSceneToLoad);
         SceneManager.LoadScene(mainSceneToLoad, LoadSceneMode.Additive);
+
+        // Pindahkan player ke posisi awal setelah scene di-load
+        player.transform.position = playerStartPosition;
     }
 }
 
