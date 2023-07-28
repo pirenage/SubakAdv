@@ -14,7 +14,7 @@ public class GameSceneManager : MonoBehaviour
     }
 
     [SerializeField] ScreenTint screenTint;
-    [SerializeField] CameraConfiner confiner;
+    //[SerializeField] CameraConfiner confiner;
     string currentScene;
     AsyncOperation load;
     AsyncOperation unload;
@@ -40,7 +40,7 @@ public class GameSceneManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         screenTint.UnTint();
-        confiner.UpdateBounds();
+        //confiner.UpdateBounds();
     }
     public void SwitcScene(string to, Vector3 targertposition)
     {

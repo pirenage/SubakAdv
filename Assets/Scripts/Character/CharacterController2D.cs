@@ -63,7 +63,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 speed /= 4;
                 isSpeedReduced = true;
-                AudioManager.instance.Play(sneak);
+                // AudioManager.instance.Play(sneak);
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -78,19 +78,18 @@ public class CharacterController2D : MonoBehaviour
         {
             Dash();
 
-            AudioManager.instance.Play(sneak);
+            // AudioManager.instance.Play(sneak);
         }
-        if (moving && !isWalkingSoundPlaying)
-        {
+        // if (moving && !isWalkingSoundPlaying)
+        // {
 
-            AudioManager.instance.Play(Jalan);
-
-            isWalkingSoundPlaying = true;
-        }
-        else if (!moving)
-        {
-            isWalkingSoundPlaying = false;
-        }
+        //     // AudioManager.instance.Play(Jalan);
+        //     isWalkingSoundPlaying = true;
+        // }
+        // else if (!moving)
+        // {
+        //     isWalkingSoundPlaying = false;
+        // }
     }
 
     private void FixedUpdate()

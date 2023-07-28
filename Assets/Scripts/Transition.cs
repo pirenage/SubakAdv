@@ -29,6 +29,7 @@ public class Transition : MonoBehaviour
                 toTransition.position = new Vector3(destination.position.x, destination.position.y, toTransition.position.z);
                 break;
             case Transitiontype.Scene:
+                // AudioManager.instance.Play(bukapintu);
                 GameSceneManager.instance.InitSwitchScreen(sceneNameTransition, targetPosition);
                 break;
 

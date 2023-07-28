@@ -2593,6 +2593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1331238318}
     m_Modifications:
+    - target: {fileID: 1955145508596729089, guid: 2172d73a581866a44a8b780e0f026603, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
     - target: {fileID: 1972917561049784840, guid: 2172d73a581866a44a8b780e0f026603, type: 3}
       propertyPath: m_Name
       value: MusicManager
@@ -3692,8 +3696,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1028894977}
   - component: {fileID: 1028894978}
-  - component: {fileID: 1028894980}
-  - component: {fileID: 1028894981}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -3756,36 +3758,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 945962725}
---- !u!114 &1028894980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028894976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efdd7b3858c0c4440b11da2ea8a35e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confiner: {fileID: 1028894981}
---- !u!114 &1028894981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028894976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ConfineMode: 0
-  m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
-  m_ConfineScreenEdges: 1
-  m_Damping: 0
 --- !u!1001 &1066193139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4716,6 +4688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1331238318}
     m_Modifications:
+    - target: {fileID: 3190528613493976394, guid: fbe7143ab5a8e1b40974a00a5da601c4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
     - target: {fileID: 4083676104502709510, guid: fbe7143ab5a8e1b40974a00a5da601c4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5413,7 +5389,7 @@ MonoBehaviour:
   timeText: {fileID: 634104248}
   globalLight: {fileID: 2107534270}
   myLight: {fileID: 1204747835}
-  timeScale: 60
+  timeScale: 72
   startAtTime: 28800
 --- !u!114 &1501332876
 MonoBehaviour:
@@ -5463,7 +5439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenTint: {fileID: 1234231924}
-  confiner: {fileID: 1028894980}
 --- !u!1001 &1507491229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10554,13 +10529,13 @@ MonoBehaviour:
           m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1501332877}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

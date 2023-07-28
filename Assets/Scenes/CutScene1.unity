@@ -311,4 +311,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1247954314}
-  sceneToLoad: MainScene
+  essentialSceneToLoad: essensial
+  mainSceneToLoad: MainScene
