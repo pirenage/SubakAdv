@@ -2267,7 +2267,7 @@ MonoBehaviour:
   targetText: {fileID: 555834098}
   nameText: {fileID: 559572525}
   portrait: {fileID: 1920567805}
-  visibleTextPercentage: 0
+  visibleTextPercent: 0
   timePerLetter: 0
 --- !u!1001 &655561371
 PrefabInstance:
@@ -2610,7 +2610,7 @@ PrefabInstance:
     - target: {fileID: 1955145508596729089, guid: 2172d73a581866a44a8b780e0f026603, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 24300002, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
+      objectReference: {fileID: -8710149380900308685, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
     - target: {fileID: 1972917561049784840, guid: 2172d73a581866a44a8b780e0f026603, type: 3}
       propertyPath: m_Name
       value: MusicManager
@@ -4705,7 +4705,7 @@ PrefabInstance:
     - target: {fileID: 3190528613493976394, guid: fbe7143ab5a8e1b40974a00a5da601c4, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 24300002, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
+      objectReference: {fileID: 1058536704039769729, guid: 519b39d25da9b71419d745a993732ebf, type: 2}
     - target: {fileID: 4083676104502709510, guid: fbe7143ab5a8e1b40974a00a5da601c4, type: 3}
       propertyPath: m_RootOrder
       value: -1

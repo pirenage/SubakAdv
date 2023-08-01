@@ -15,8 +15,8 @@ public class DialogueSystem : MonoBehaviour
     int currentTextLine;
 
     [Range(0f, 1f)]
-    [SerializeField] float visibleTextPercentage;
-    [SerializeField] float timePerLetter;
+    [SerializeField] float visibleTextPercent;
+    [SerializeField] float timePerLetter = 0.05f;
     float totalTimetoType, currentTime;
     string lineToShow;
 
@@ -31,24 +31,24 @@ public class DialogueSystem : MonoBehaviour
 
     private void TypeOutText()
     {
-        if (visibleTextPercentage >= 1f) { return; }
+        if (visibleTextPercent >= 1f) { return; }
         currentTime += Time.deltaTime;
-        visibleTextPercentage = currentTime / totalTimetoType;
-        visibleTextPercentage = Mathf.Clamp(visibleTextPercentage, 0f, 1f);
+        visibleTextPercent = currentTime / totalTimetoType;
+        visibleTextPercent = Mathf.Clamp(visibleTextPercent, 0f, 1f);
         UpdateText();
     }
 
     void UpdateText()
     {
-        int letterCount = (int)(lineToShow.Length * visibleTextPercentage);
+        int letterCount = (int)(lineToShow.Length * visibleTextPercent);
         targetText.text = lineToShow.Substring(0, letterCount);
     }
 
     private void PushText()
     {
-        if (visibleTextPercentage < 1f)
+        if (visibleTextPercent < 1f)
         {
-            visibleTextPercentage = 1f;
+            visibleTextPercent = 1f;
             UpdateText();
             return;
         }
@@ -68,7 +68,7 @@ public class DialogueSystem : MonoBehaviour
         lineToShow = currentDialogue.line[currentTextLine];
         totalTimetoType = lineToShow.Length * timePerLetter;
         currentTime = 0f;
-        visibleTextPercentage = 0f;
+        visibleTextPercent = 0f;
         targetText.text = "";
 
         currentTextLine += 1;
@@ -97,5 +97,6 @@ public class DialogueSystem : MonoBehaviour
     private void Conclude()
     {
         Debug.Log("Finished");
+        Show(false);
     }
 }
