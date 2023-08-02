@@ -30,7 +30,7 @@ public class GameSceneManager : MonoBehaviour
     IEnumerator Transition(string to, Vector3 targetposition)
     {
         screenTint.Tint();
-        yield return new WaitForSeconds(1f / screenTint.speed + 0.1f);
+        yield return new WaitForSeconds(1f * screenTint.speed + 0.1f);
         SwitcScene(to, targetposition);
         while (load != null && unload != null)
         {
