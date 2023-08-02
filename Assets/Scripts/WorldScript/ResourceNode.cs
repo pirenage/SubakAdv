@@ -10,11 +10,11 @@ public class ResourceNode : ToolHit
     [SerializeField] Item item;
     [SerializeField] int itemCountInOneDrop = 1;
     [SerializeField] ResourceNodeType nodeType;
-    [SerializeField] AudioClip choppingSound;
+    // [SerializeField] AudioClip choppingSound;
 
     public override void Hit()
     {
-        AudioManager.instance.Play(choppingSound);
+        // AudioManager.instance.Play(choppingSound);
         while (dropCount > 0)
         {
             dropCount -= 1;
